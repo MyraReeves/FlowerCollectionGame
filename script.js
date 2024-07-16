@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded",
     // ...and then...
     ()=> {
-        // Store inside of variables the references to all the DOM div elements we need:
+        // Store inside of variables references to the DOM div elements we need:
         const gameContainer = document.getElementById("game-container");
         const startButton = document.getElementById("start-button");
         const resetButton = document.getElementById("reset-button");
@@ -12,15 +12,18 @@ document.addEventListener("DOMContentLoaded",
         // Set the initial values for starting the game:
         let score = 0;
         let timeLeft = 20;
+        // And turn on the ability to click on the flower image as it appears on the screen:
         let canClick = true;
 
-        // And create a variable to hold how quickly the flowers will change locations on the screen:
+        // Create a variable to hold how quickly the flowers will change locations on the screen:
         let flowerTimer;
 
         // Create a function to start the game:
         function startGame() {
+            // Remove both the start button and the reset button from the screen:
             startButton.style.display = "none";
             resetButton.style.display = "none";
+            // In case of multiple rounds of playing, reset the score and timer each time a new game begins:
             score = 0;
             timeLeft = 20;
             // Display the current score counter and remaining time counter:
@@ -73,9 +76,40 @@ document.addEventListener("DOMContentLoaded",
             }
         );
 
-        // Append the newFlower image into the gameContainer
+        // Add this newFlower image into the gameContainer
         gameContainer.appendChild(newFlower);
     }
+
+    // Create a function to handle ending the game:
+    function endGame() {
+        // Remove the start button from the screen:
+        startButton.style.display = "none";
+        // Cause the reset button to appear:
+        resetButton.style.display = "block";
+        // Display how many flowers the user clicked on before time ran out:
+        scoreDisplay.textContent = 'GAME OVER! \nFinal Score: ${score}';
+        // Reset the timer display to be blank:
+        timerDisplay.textContent = "";
+        // Turn off the ability to click on any new flowers:
+        canClick = false;
+    }
+
+    // Add an event listener for starting the game on mouse click to the start button:
+    startButton.addEventListener("click", startGame);
+
+    // Add an event listener for resetting/replaying a new game on mouse click to the reset button:
+    resetButton.addEventListener("click", () => {
+        // Remove the start and reset buttons from the screen:   
+        startButton.styledisplay = "none";
+        resetButton,styledisplay = "none";
+        // Make the flowers clickable
+        canClick = true;
+        // Call on the startGame function:
+        startGame();
+    } );
+
+
+
 
 
 });
