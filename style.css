@@ -38,3 +38,26 @@ h1 {
     border-radius: 10px;
     background-color: rgba(255, 206, 214, 0.704);
 }
+
+#start-button, #reset-button {
+    padding: 10px;
+    border: 3px outset rgb(204, 20, 130);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color:  rgba(255, 255, 0, 0.447);
+    color: black;
+}
+
+#start-button:hover {
+    background-color: rgba(144, 238, 144, 0.623);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: rgb(78, 1, 78);
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+}
