@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded",
         // If the game isn't running then end the function:
         if (!canClick) return;
         // But if the game is still running, then...
-        // create a variable to call on the DOM div called "flowers": 
-        const flower = document.getElementById("flowers");
+        // create a variable to call on the DOM div called "flower": 
+        const flower = document.getElementById("flower");
         if (flower) gameContainer.removeChild(flower);
         // Create a variable to hold a new element on the page - the flower image:
         const newFlower = document.createElement("img");
