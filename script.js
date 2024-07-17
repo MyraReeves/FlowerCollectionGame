@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded",
         // Create a variable to hold a new element on the page - the flower image:
         const newFlower = document.createElement("img");
         // Set the source of that new image tag on the page to be the flower gif:
-        newFlower.src = "/Images/FromTenor_changing-flowers.gif";
+        newFlower.src = "Images/FromTenor_changing-flowers.gif";
         // Set the image id to be "flower":
         newFlower.id = "flower";
         // Position the flower in a random location within the game-container square:
