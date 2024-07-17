@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",
 
         // Set the initial values for starting the game:
         let score = 0;
-        let timeLeft = 20;
+        let timeLeft = 30;
         // And turn on the ability to click on the flower image as it appears on the screen:
         let canClick = true;
 
@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded",
             resetButton.style.display = "none";
             // In case of multiple rounds of playing, reset the score and timer each time a new game begins:
             score = 0;
-            timeLeft = 20;
+            timeLeft = 30;
             // Display the current score counter and remaining time counter:
             scoreDisplay.textContent = 'Number of flowers collected: ' + score;
             timerDisplay.style.display = "block";
             timerDisplay.textContent = 'TIME REMAINING: ' + timeLeft + ' seconds';
             // Call on the spawnFlower function:
             spawnFlower();
-            // Set how quickly the flowers change on the screen to 0.25 seconds (aka 250 milliseconds):
-            flowerTimer = setInterval(spawnFlower, 250);
+            // Set how quickly the flowers change on the screen to 0.700 seconds (aka 700 milliseconds):
+            flowerTimer = setInterval(spawnFlower, 700);
             // Decrement the game's timer by one every second...
             const gameTimer = setInterval(  ()=> {
                 timeLeft--;
