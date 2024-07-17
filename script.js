@@ -90,10 +90,13 @@ document.addEventListener("DOMContentLoaded",
         // Cause the reset button to appear:
         resetButton.style.display = "block";
         // Display how many flowers the user clicked on before time ran out:
-        scoreDisplay.setAttribute('style', 'white-space: pre;');
-        scoreDisplay.textContent = 'GAME OVER! \r\nFinal Score = ' + score;
+        const finalScore = document.getElementById("final-score");
+        finalScore.setAttribute('style', 'white-space: pre;');
+        finalScore.textContent = 'GAME OVER! \r\nFinal score = ' + score + '\r\nWhat a beautiful bouquet!';
         // Reset the timer display to be blank:
         timerDisplay.style.display = "none";
+        // Reset the score counter display to be blank:
+        scoreDisplay.style.display = "none";
         // Turn off the ability to click on any new flowers:
         canClick = false;
         // Remove flower gif from the screen:
