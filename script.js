@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded",
         const resetButton = document.getElementById("reset-button");
         const scoreDisplay = document.getElementById("score");
         const timerDisplay = document.getElementById("timer");
+        const gameOver = document.getElementById("game-over");
+        const bouquetMessage = document.getElementById("bouquet-message");
         const finalScore = document.getElementById("final-score");
 
         // Set the initial values for starting the game:
@@ -92,8 +94,11 @@ document.addEventListener("DOMContentLoaded",
         // Cause the reset button to appear:
         resetButton.style.display = "block";
         // Display how many flowers the user clicked on before time ran out:
+        gameOver.textContent = '\r\nGAME OVER!';
+        bouquetMessage.setAttribute('style', 'white-space: pre;');
+        bouquetMessage.textContent = '\r\nYou\'ve built a beautiful \r\nbouquet by collecting...';
         finalScore.setAttribute('style', 'white-space: pre;');
-        finalScore.textContent = '\r\nGAME OVER! \r\n \r\nYou\'ve built a beautiful \r\nbouquet by collecting \r\n' + score + ' flowers! \r\n💐';
+        finalScore.textContent = score + ' flowers! \r\n💐';
         // Reset the timer display to be blank:
         timerDisplay.style.display = "none";
         // Reset the score counter display to be blank:
@@ -113,6 +118,8 @@ document.addEventListener("DOMContentLoaded",
         startButton.styledisplay = "none";
         resetButton.styledisplay = "none";
         // Also remove the game over / final score message from the game area:
+        gameOver.style.display = "none";
+        bouquetMessage.style.display = "none";
         finalScore.style.display = "none";
         // Make the flowers clickable
         canClick = true;

@@ -93,6 +93,16 @@ h1 {
     justify-content: center;
 }
 
-#final-score {
+#game-over {
+    font-size: 300%;
+    color: darkred;
+}
+
+#bouquet-message, #final-score {
     font-size: 200%;
+}
+
+#final-score {
+    font-weight: bold;
+    color: darkred;
 }
