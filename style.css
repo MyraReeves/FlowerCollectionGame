@@ -69,20 +69,21 @@ h1 {
     cursor: crosshair;
 }
 
-#score {
-    /* margin: 10px; */
+#score, #timer {
     padding: 5px;
     border-radius: 5px;
-    border-bottom: 2px solid;
-    background: #faf2d9;
-    color: purple;
+    border: 1px solid;
     font-size: 24px;
     font-weight: 500;
 }
 
+#score {
+    background: #faf2d9;
+    color: darkred;
+}
+
 #timer {
-    font-size: 24px;
-    margin-bottom: 10px;
+    background-color: rgb(204, 240, 252);
 }
 
 .score-container {
