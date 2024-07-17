@@ -67,7 +67,7 @@ h1 {
     position: absolute;
     width: 100px;
     height: 100px;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="70" style="font-size: 57px;"><text y="50">🧺</text></svg>'), grab;
+    cursor: cell;
 }
 
 #score, #timer {
