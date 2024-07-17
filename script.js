@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded",
         // Cause the reset button to appear:
         resetButton.style.display = "block";
         // Display how many flowers the user clicked on before time ran out:
+        gameOver.setAttribute('style', 'white-space: pre;');
         gameOver.textContent = '\r\nGAME OVER!';
         bouquetMessage.setAttribute('style', 'white-space: pre;');
         bouquetMessage.textContent = '\r\nYou\'ve built a beautiful \r\nbouquet by collecting...';

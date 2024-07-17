@@ -94,12 +94,12 @@ h1 {
 }
 
 #game-over {
-    font-size: 300%;
+    font-size: 270%;
     color: darkred;
 }
 
 #bouquet-message, #final-score {
-    font-size: 200%;
+    font-size: 170%;
 }
 
 #final-score {
