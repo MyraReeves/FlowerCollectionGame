@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded",
         // Display how many flowers the user clicked on before time ran out:
         const finalScore = document.getElementById("final-score");
         finalScore.setAttribute('style', 'white-space: pre;');
-        finalScore.textContent = 'GAME OVER! \r\nFinal score = ' + score + '\r\nWhat a beautiful bouquet!';
+        finalScore.textContent = 'GAME OVER! \r\n \r\nFinal score = ' + score + '\r\nWhat a beautiful bouquet!';
         // Reset the timer display to be blank:
         timerDisplay.style.display = "none";
         // Reset the score counter display to be blank:
