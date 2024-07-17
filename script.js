@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded",
         resetButton.style.display = "block";
         // Display how many flowers the user clicked on before time ran out:
         finalScore.setAttribute('style', 'white-space: pre;');
-        finalScore.textContent = '\r\nGAME OVER! \r\n \r\nFinal score = ' + score + '\r\nHere\'s your bouquet! \r\n💐';
+        finalScore.textContent = '\r\nGAME OVER! \r\n \r\nFinal score = ' + score + '\r\nYou\'ve built \r\n a beautiful bouquet! \r\n💐';
         // Reset the timer display to be blank:
         timerDisplay.style.display = "none";
         // Reset the score counter display to be blank:
