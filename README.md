@@ -22,6 +22,6 @@ Chris "Badger" Mackie for his testing skills, stylistic input, and moral support
 
 ## Gameplay Instructions:
 
-After starting the game, use your cursor and click the mouse button to collect as many flowers as you can before the timer runs out!
+After starting the game, use your cursor and mouse button to collect as many flowers as you can before the timer runs out.
 
 The more centrally located your cursor is on top of a flower, the more likely it is that you will successfully grab it when clicking the mouse button!
