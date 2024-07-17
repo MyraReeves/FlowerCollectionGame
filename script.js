@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded",
             score = 0;
             timeLeft = 20;
             // Display the current score counter and remaining time counter:
-            scoreDisplay.textContent = 'Number of flowers collected: ${score}';
-            timerDisplay.textContent = 'TIME REMAINING: ${timeLeft} seconds';
+            scoreDisplay.textContent = 'Number of flowers collected: ' + score;
+            timerDisplay.style.display = "block";
+            timerDisplay.textContent = 'TIME REMAINING: ' + timeLeft + ' seconds';
             // Call on the spawnFlower function:
             spawnFlower();
             // Set how quickly the flowers change on the screen to 0.25 seconds (aka 250 milliseconds):
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded",
             // Decrement the game's timer by one every second...
             const gameTimer = setInterval(  ()=> {
                 timeLeft--;
-                timerDisplay.textContent = 'TIME REMAINING: ${timeLeft} seconds';
+                timerDisplay.textContent = 'TIME REMAINING: ' + timeLeft + ' seconds';
                 // ...and once the timer reaches zero, reset this timer and call on the endGame function:
                 if (timeLeft <= 0) {
                     clearInterval(flowerTimer);
@@ -61,8 +62,10 @@ document.addEventListener("DOMContentLoaded",
         // Set the image id to be "flower":
         newFlower.id = "flower";
         // Position the flower in a random location within the game-container square:
-        newFlower.style.left = '${Math.random() * 200}px';
-        newFlower.style.top = '${Math.random() * 200}px';
+        let leftSpacing = Math.floor(Math.random() * 200);
+        newFlower.style.left = leftSpacing +"px";
+        let topSpacing = Math.floor(Math.random() * 200);
+        newFlower.style.top = topSpacing+'px';
         // Pay attention to every time the flower gif is clicked on...
         newFlower.addEventListener("click", 
             // ...and if the game is over then end the function
@@ -70,7 +73,7 @@ document.addEventListener("DOMContentLoaded",
                 if (!canClick) return;
                 // But if the flower is still clickable, then increase the score by one...
                 score++;
-                scoreDisplay.textContent = 'Number of flowers collected: ${score}';
+                scoreDisplay.textContent = 'Number of flowers collected: ' + score;
                 // ...and remove the flower image from the screen:
                 gameContainer.removeChild(newFlower);
             }
@@ -87,11 +90,13 @@ document.addEventListener("DOMContentLoaded",
         // Cause the reset button to appear:
         resetButton.style.display = "block";
         // Display how many flowers the user clicked on before time ran out:
-        scoreDisplay.textContent = 'GAME OVER! \nFinal Score: ${score}';
+        scoreDisplay.textContent = 'GAME OVER! \nFinal Score = ' + score;
         // Reset the timer display to be blank:
-        timerDisplay.textContent = "";
+        timerDisplay.style.display = "none";
         // Turn off the ability to click on any new flowers:
         canClick = false;
+        // Remove flower gif from the screen:
+        newFlower.style.display = "none";
     }
 
     // Add an event listener for starting the game on mouse click to the start button:
