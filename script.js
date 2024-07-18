@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded",
     // ...and then...
     ()=> {
-        // Store inside of variables references to the DOM div elements we need:
+        // Store inside of variables the references to DOM div elements we need:
         const gameContainer = document.getElementById("game-container");
         const startButton = document.getElementById("start-button");
         const resetButton = document.getElementById("reset-button");
@@ -12,14 +12,17 @@ document.addEventListener("DOMContentLoaded",
         const bouquetMessage = document.getElementById("bouquet-message");
         const finalScore = document.getElementById("final-score");
 
+        
         // Set the initial values for starting the game:
         let score = 0;
         let timeLeft = 30;
         // And turn on the ability to click on the flower image as it appears on the screen:
         let canClick = true;
 
+
         // Create a variable to hold how quickly the flowers will change locations on the screen:
         let flowerTimer;
+
 
         // Create a function to start the game:
         function startGame() {
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded",
             }, 1000);
         }
 
+
     // Create the function to spawn the flower animation in a new location on the screen:
     function spawnFlower() {
         // If the game isn't running then end the function:
@@ -72,13 +76,12 @@ document.addEventListener("DOMContentLoaded",
         newFlower.style.top = topSpacing+'px';
         // Pay attention to every time the flower gif is clicked on...
         newFlower.addEventListener("click", 
-            // ...and if the game is over then end the function
             () => {
                 if (!canClick) return;
-                // But if the flower is still clickable, then increase the score by one...
+                // If the flower was clicked, then increase the score by one...
                 score++;
                 scoreDisplay.textContent = 'Number of flowers collected: ' + score;
-                // ...and remove the flower image from the screen:
+                // ...and move the flower image somewhere new:
                 gameContainer.removeChild(newFlower);
             }
         );
@@ -86,6 +89,7 @@ document.addEventListener("DOMContentLoaded",
         // Add this newFlower image into the gameContainer
         gameContainer.appendChild(newFlower);
     }
+
 
     // Create a function to handle ending the game:
     function endGame() {
@@ -106,9 +110,10 @@ document.addEventListener("DOMContentLoaded",
         scoreDisplay.style.display = "none";
         // Turn off the ability to click on any new flowers:
         canClick = false;
-        // Remove flower gif from the screen:
+        // Remove the flower gif from the screen:
         flower.style.display = "none";
     }
+
 
     // Add an event listener for starting the game on mouse click to the start button:
     startButton.addEventListener("click", startGame);
