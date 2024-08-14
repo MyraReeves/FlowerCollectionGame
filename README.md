@@ -6,7 +6,7 @@ Inspiration for this project came from the ["Clicky Cat" demonstration](https://
 
 The images used to create my game belong to the public domain.
 
-### I would like to extend additional thanks to:
+### Additional thanks to:
 
 Chris "Badger" Mackie for his testing skills, stylistic input, and moral support of me being in school.
 
@@ -25,3 +25,5 @@ Chris "Badger" Mackie for his testing skills, stylistic input, and moral support
 After starting the game, use your cursor and mouse button to collect as many flowers as you can before the timer runs out.
 
 The more centrally located your cursor is on top of a flower, the more likely it is that you will successfully grab it when clicking the mouse button!
+
+### [➡️ Click here](https://myrareeves.github.io/FlowerCollectionGame/) to play.
